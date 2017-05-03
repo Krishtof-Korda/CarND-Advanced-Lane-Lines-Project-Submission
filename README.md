@@ -13,15 +13,6 @@ The goals / steps of this project are the following:
 * Warp the detected lane boundaries back onto the original image.
 * Output visual display of the lane boundaries and numerical estimation of lane curvature and vehicle position.
 
-[//]: # (Image References)
-
-[image1]: ./examples/undistort_output.png "Undistorted"
-[image2]: ./test_images/test1.jpg "Road Transformed"
-[image3]: ./examples/binary_combo_example.jpg "Binary Example"
-[image4]: ./examples/warped_straight_lines.jpg "Warp Example"
-[image5]: ./examples/color_fit_lines.jpg "Fit Visual"
-[image6]: ./examples/example_output.jpg "Output"
-[video1]: ./project_video.mp4 "Video"
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/571/view) Points
 
@@ -71,11 +62,11 @@ This task is really about trying to remove as much data that we can from the ima
 
 ![alt text][2]
 
-  [2]: ./test_images/ ""(hover text)
+  [2]: ./test_images/ "test"
   
 ![alt text][2]
 
-  [2]: ./test_images/ ""(hover text)
+  [2]: ./test_images/ "test"
 
 #### 3. Describe how (and identify where in your code) you performed a perspective transform and provide an example of a transformed image.
 
@@ -146,13 +137,13 @@ Destination Corners =
 I verified that my perspective transform was working as expected by drawing the `src` and `dst` points onto a test image and its warped counterpart to verify that the lines appear parallel in the warped image. You can see examples of the warped images in normal vision and binary vision. In all cases the `src` and `dst` lines are parrallel in the warped image. In the last image I show that the curved lines are also parallel.
 
 ![alt text][4]
-  [4]: ./test_images/Warped-Binary-Curved.png (Warped Original)
+  [4]: ./test_images/Warped-Binary-Curved.png "Warped Original"
   
 ![alt text][5]
-  [5]: ./test_images/Warped-Binary-Curved1.png (Warped Binary Straight)
+  [5]: ./test_images/Warped-Binary-Curved1.png "Warped Binary Straight"
   
 ![alt text][6]
-  [6]: ./test_images/Warped-Binary-Curved2.png (Warped Binary Curved)
+  [6]: ./test_images/Warped-Binary-Curved2.png "Warped Binary Curved"
 
 #### 4. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
 
@@ -161,10 +152,10 @@ Lane line pixels and polynomial fitting were done with the function `find_lines(
 After the first run of the sliding window search, a better method is used to search since we already know where the lines were from the previous frame of the video. So we start looking there with a margin around the lines. If we end up loosing the line we start over with the sliding window search.
 
 ![alt text][7]
-  [7]: ./test_images/Sliding-Window-PolyFit.png (Sliding Window Fit)
+  [7]: ./test_images/Sliding-Window-PolyFit.png "Sliding Window Fit"
   
 ![alt text][8]
-  [8]: ./test_images/Skip-Sliding-Window-PolyFit.png (Previous Detection Fit)
+  [8]: ./test_images/Skip-Sliding-Window-PolyFit.png "Previous Detection Fit"
 
 #### 5. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
 
@@ -177,16 +168,16 @@ Radius_of_curve =[(1+(2Ay+B)^2)^3/2]/∣2A∣
 I implemented this step in lines # through # in my code in `yet_another_file.py` in the function `map_lane()`.  Here is an example of my result on a test image:
 
 ![alt text][9]
-  [9]: ./test_images/Drawlane1.png (Original)
+  [9]: ./test_images/Drawlane1.png "Original"
   
 ![alt text][10]
-  [10]: ./test_images/Drawlane2.png (Original)
+  [10]: ./test_images/Drawlane2.png "Warped"
   
 ![alt text][11]
-  [11]: ./test_images/Drawlane3.png (Original)
+  [11]: ./test_images/Drawlane3.png "Lane Detection"
   
 ![alt text][12]
-  [12]: ./test_images/Drawlane4.png (Original)
+  [12]: ./test_images/Drawlane4.png "Painted Lane"
 
 ---
 
