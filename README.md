@@ -1,5 +1,10 @@
 ## Korda's Advanced Lane Finding Project for Udacity Self-Driving Car Nanodegree
 
+[YouTube Video](https://youtu.be/mDcqw8k7jtw)
+[![alt text](./thumb1.png)](https://youtu.be/mDcqw8k7jtw)
+
+
+
 ---
 
 The goals / steps of this project are the following:
@@ -238,7 +243,11 @@ Lastly, we unwarp the combined image and painted lane using the inverse perspect
 
 #### 1. Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video (wobbly lines are ok but no catastrophic failures that would cause the car to drive off the road!).
 
-[Here's a youtube link to my video result](https://youtu.be/mDcqw8k7jtw)
+[Here's a link to my video result](https://youtu.be/mDcqw8k7jtw)
+
+[YouTube Video](https://youtu.be/mDcqw8k7jtw)
+[![alt text](./thumb1.png)](https://youtu.be/mDcqw8k7jtw)
+
 The repository file is available at this [link](./project_output.mp4)
 
 ---
@@ -249,7 +258,11 @@ The repository file is available at this [link](./project_output.mp4)
 
 The lessons prepared us very well for this challenge. Below is a link to the first attempt at detecting the lanes using only the code learned in the lessons. 
 
-[Here's a youtube link to my first attempt video result](https://youtu.be/fi-f2ONK2X0)
+[Here's a link to my first attempt video result](https://youtu.be/fi-f2ONK2X0)
+
+[YouTube Video](https://youtu.be/fi-f2ONK2X0)
+[![alt text](./thumb2.png)](https://youtu.be/fi-f2ONK2X0)
+
 The repository file is available at this [link](./project_output_1st.mp4)
 
 When the lines are well contrasted with the blacktop the pipeline performs very well. However, when it gets to the bridge areas it fails catastrophically, trying to send us into the divider. This is due to the pipeline loosing the yellow lane against the lighter background and then finding the sharp contrast in the wall and thinking that was the lane. The first thing I did was decide to limit what the pipeline could see. So I added the mask mentioned earlier. This helped a little but the pipeline still lost the line and had poor performance.
