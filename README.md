@@ -184,7 +184,13 @@ And finally here is a different test image with curved lines that are still para
 
 #### 4. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
 
-Lane line pixel detection and polynomial fitting were done with the function `find_lines()` in code cell 23 of the IPython notebook. The warped binary thresholded and masked image is given as input. Then a histogram is calculated of the binary to see where the lines are most likely to be. The tallest peak on the left and right are determined to be the lines. Then a sliding window search is done from the bottom of the image to the top in `n` increments with a window width of 75 pixels. Anytime a pixel falls inside the window and there are at least 50 other of them it considers it a line and stores the pixels for later fitting. Once all the detected line pixels are stored, a polynomial of order 2 is fit to each the left and right lines using the function y = A(x)^2 + B(x) + C. Here is an example of the sliding windown search with the fit line in yellow and windows plotted in green (another glitch caused only parts of the windows to display). The left line pixels are colored red and right are blue. 
+Lane line pixel detection and polynomial fitting were done with the function `find_lines()` in code cell 23 of the IPython notebook. The warped binary thresholded and masked image is given as input. Then a histogram is calculated of the binary to see where the lines are most likely to be. The tallest peak on the left and right are determined to be the lines. 
+
+![alt text][100]
+
+  [100]: ./test_images/Warped-Histogram.png "Warped with Histogram"
+
+Then a sliding window search is done from the bottom of the image to the top in `n` increments with a window width of 75 pixels. Anytime a pixel falls inside the window and there are at least 50 other of them it considers it a line and stores the pixels for later fitting. Once all the detected line pixels are stored, a polynomial of order 2 is fit to each the left and right lines using the function y = A(x)^2 + B(x) + C. Here is an example of the sliding windown search with the fit line in yellow and windows plotted in green (another glitch caused only parts of the windows to display). The left line pixels are colored red and right are blue. 
 
 ![alt text][10]
 
